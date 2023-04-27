@@ -459,7 +459,7 @@
                         </div>
                       </div>
                       <div class="u-form-group u-form-number u-form-number-layout-range-number u-form-group-7">
-                        <label for="range-9a56" class="u-label">Number Input</label>
+                        <label for="range-9a56" class="u-label">Max trains</label>
                         <div class="u-input-row" data-value="0">
                           <input value="45" min="1" max="45" step="1" type="range" placeholder="" id="maxtrains" name="range" class="u-input u-range">
                           <input type="number" placeholder="" id="maxtrains" class="u-input u-input-rectangle u-text-black" min="1" max="45" step="1" value="45" fdprocessedid="naozf7">
@@ -483,6 +483,9 @@
                        
                        </div>
             
+                
+                
+                
             </div>
           </div>
         </div>
@@ -617,7 +620,7 @@ def depth_limited_search(graph, target_cities, max_trains, depth_limit):
 def iterative_deepening_search(graph, target_cities, max_trains):
     target_cities = set(target_cities)  # Convert target_cities to a set
     depth_limit = 1
-    max_depth_limit = 1000  # Set the maximum depth limit
+    max_depth_limit = 50  # Set the maximum depth limit
     best_path, best_score, total_trains_used = None, float('-inf'), 0
 
     while best_path is None and depth_limit <= max_depth_limit:

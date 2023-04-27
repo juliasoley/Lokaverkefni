@@ -391,7 +391,9 @@
                     
                         
                         <button id="click-btn" type="submit" py-click="my_function()">OK</button>
-  <div id="test-output"></div>
+                        <div id="test-output"></div>
+                          <div id="test-output1"></div>
+                          <div id="test-output2"></div>
                      
               
                     </form>
@@ -479,7 +481,6 @@ graph = {
     'Winnipeg': {'Calgary': 6, 'Duluth': 4, 'Helena': 4, 'Sault St. Marie': 6}
 }
 
-
 def score_route(trains):
     if trains == 1:
         return 1
@@ -527,9 +528,9 @@ def depth_limited_search(graph, target_cities, max_trains, depth_limit):
 
 
 def iterative_deepening_search(graph, target_cities, max_trains):
-    target_cities = set(target_cities)  # Convert target_cities to a set
+    target_cities = set(target_cities)  
     depth_limit = 1
-    max_depth_limit = 1000  # Set the maximum depth limit
+    max_depth_limit = 36 
     best_path, best_score, total_trains_used = None, float('-inf'), 0
 
     while best_path is None and depth_limit <= max_depth_limit:
@@ -554,7 +555,6 @@ def my_function():
       display("Best path:",best_path,f'Score: {best_score}',f'Trains used: {total_trains_used}', target="test-output")
     else:
         display("You need to choose at least two cities",target="test-output")
-
 
 </py-script>
 </body></html>
